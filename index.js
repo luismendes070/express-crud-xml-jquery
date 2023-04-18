@@ -17,7 +17,7 @@ try{
 
   const crud = require('./crud');
 
-  let book:Book;
+  let book: type require('./crud').Book;
 
   book.id = "1";
   book.title = "The Catcher in the Rye";
