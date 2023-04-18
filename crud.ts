@@ -12,7 +12,7 @@ function getBooks(): Promise<Book[]> {
     $.ajax({
       url: 'data.xml',
       dataType: 'xml',
-      success: (xml) => {
+      success: (xml: any) => {
         const books: Book[] = [];
         $(xml).find('book').each((index, element) => {
           const book: Book = {
@@ -54,7 +54,7 @@ function addBook(book: Book): Promise<Book> {
       success: () => {
         resolve(book);
       },
-      error: (error) => {
+      error: (error: any) => {
         reject(error);
       },
     });
@@ -76,7 +76,7 @@ function updateBook(book: Book): Promise<Book> {
       success: () => {
         resolve(book);
       },
-      error: (error) => {
+      error: (error: any) => {
         reject(error);
       },
     });
@@ -93,7 +93,7 @@ function deleteBook(id: number): Promise<number> {
       success: () => {
         resolve(id);
       },
-      error: (error) => {
+      error: (error: any) => {
         reject(error);
       },
     });
