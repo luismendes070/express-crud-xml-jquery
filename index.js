@@ -12,3 +12,23 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+try{
+
+  const crud = require('./crud');
+
+  let book:Book;
+
+  book.id = "1";
+  book.title = "The Catcher in the Rye";
+  book.author = "J.D. Salinger";
+  book.published = "1951";
+
+  crud.addBook(book);
+
+}catch(error){
+
+}
+finally{
+
+}
